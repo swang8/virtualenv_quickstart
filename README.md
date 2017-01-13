@@ -13,14 +13,18 @@ open `~/.bashrc` and add
         echo "Could not find file /usr/local/bin/virtualenvwrapper.sh. Install virtualenvwrapper, or fix path."
     fi
 
-you're done!
+Restart your terminal.
 
-## use
+You're done!
 
-    mkvirtualenv myproject
-    pip install something
-    mkvirtualenv myotherproject
-    pip install something different
+## example usage
+
+    mkvirtualenv proj1
+    pip install pkg-a
+    mkvirtualenv proj2
+    pip install pkg-b
+    workon proj1
+    rmvirtualenv proj2
     deactivate
 
 ## other options
