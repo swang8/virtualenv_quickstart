@@ -4,9 +4,16 @@
 
     sudo pip install pip --upgrade
     sudo pip install virtualenvwrapper
-    # one time installation
-    source /usr/local/bin/virtualenvwrapper.sh (if not at that path, search for virtualenvwrapper.sh)
 
+open `~/.bashrc` and add
+
+    if [ -f  /usr/local/bin/virtualenvwrapper.sh ]; then
+        source /usr/local/bin/virtualenvwrapper.sh
+    else
+        echo "Could not find file /usr/local/bin/virtualenvwrapper.sh. Install virtualenvwrapper, or fix path."
+    fi
+
+you're done!
 
 ## use
 
@@ -18,11 +25,11 @@
 
 ## other options
 
-### auto-restore last used virtual env in new terminals windows
+### auto-restore last used virtual env in new terminals
 
 This is my preferred workflow.
 
-Place in your ~/.bashrc file:
+Place in your `~/.bashrc` file:
 
     if [ -f  /usr/local/bin/virtualenvwrapper.sh ]; then
         source /usr/local/bin/virtualenvwrapper.sh
