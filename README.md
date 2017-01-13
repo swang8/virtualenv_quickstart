@@ -11,11 +11,19 @@ open `~/.bashrc` and add
         source /usr/local/bin/virtualenvwrapper.sh
     else
         echo "Could not find file /usr/local/bin/virtualenvwrapper.sh. Install virtualenvwrapper, or fix path."
+        echo "run 'find / -name "*virtualenvwrapper.sh" 2> /dev/null' to search for it."
     fi
 
 Restart your terminal.
 
 You're done!
+
+## help finding virtualenvwrapper.sh
+if you can't find the installation script, you can run
+
+	find / -name "*virtualenvwrapper.sh" 2> /dev/null
+
+Mac users will likely have to do this
 
 ## example usage
 
