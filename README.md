@@ -37,6 +37,12 @@ Mac users will likely have to do this
     deactivate  # use only globally installed packages
     sudo pip install some_package  # globally install this package (not recommended, note 'sudo' is required)
 
+## python3
+
+By default, python2 is used. To use python3:
+
+    mkvirtualenv py3proj --python=python3
+
 ## other options
 
 ### auto-restore last used virtual env in new terminals
@@ -62,3 +68,7 @@ Place in your `~/.bashrc` file:
             fi
         fi
     fi
+
+## official documentation
+
+[https://media.readthedocs.org/pdf/virtualenvwrapper/latest/virtualenvwrapper.pdf](https://media.readthedocs.org/pdf/virtualenvwrapper/latest/virtualenvwrapper.pdf)
