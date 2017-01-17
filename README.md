@@ -27,13 +27,15 @@ Mac users will likely have to do this
 
 ## example usage
 
-    mkvirtualenv proj1
-    pip install pkg-a
-    mkvirtualenv proj2
-    pip install pkg-b
-    workon proj1
-    rmvirtualenv proj2
-    deactivate
+    mkvirtualenv proj1  # make a new virtual environment to sandbox python packages
+    pip install -r requirements.txt  # install all packages in requirements.txt to the proj1 environemnt
+    mkvirtualenv proj2  # make another virtual environment and switch to it
+    pip install -r other_requirements.txt  # install all packages in requirements.txt to the proj2 environemnt
+    pip install some_package  # install some_package to the proj2 virtual environment
+    workon proj1  # use packages associated with proj1
+    rmvirtualenv proj2  # remove the proj2 virtual environment (and all packages installed in it) 
+    deactivate  # use only globally installed packages
+    sudo pip install some_package  # globally install this package (not recommended, note 'sudo' is required)
 
 ## other options
 
