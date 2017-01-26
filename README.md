@@ -7,33 +7,57 @@
 
 Find where the shell script was installed to
 
-	find / -name "*virtualenvwrapper.sh" 2> /dev/null
+    find / -name "*virtualenvwrapper.sh" 2> /dev/null
 
 Source that file in your `~/.bashrc` or `~/.bash_profile` (assumed location here was `/usr/local/bin/virtualenvwrapper.sh` but your location may vary):
 
-	source /usr/local/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper.sh
 
 Restart your terminal.
 
 You're done!
 
 ## example usage
+    # take a look at your globally installed python packages
+    pip freeze
 
-    mkvirtualenv proj1  # make a new virtual environment to sandbox python packages
-    pip install -r requirements.txt  # install all packages in requirements.txt to the proj1 environemnt
-    mkvirtualenv proj2  # make another virtual environment and switch to it
-    pip install -r other_requirements.txt  # install all packages in requirements.txt to the proj2 environemnt
-    pip install some_package  # install some_package to the proj2 virtual environment
-    workon proj1  # use packages associated with proj1
-    rmvirtualenv proj2  # remove the proj2 virtual environment (and all packages installed in it) 
-    deactivate  # use only globally installed packages
-    sudo pip install some_package  # globally install this package (not recommended, note 'sudo' is required)
+    # make a new virtual environment to sandbox python packages
+    mkvirtualenv proj1
 
-## python3
+    # now look at your python packages available
+    pip freeze
 
-By default, python2 is used. To use python3:
+    # install all packages in requirements.txt to the proj1 env
+    pip install -r requirements.txt
 
-    mkvirtualenv py3proj --python=python3
+    # make another virtual environment and switch to it
+    mkvirtualenv proj2
+
+    # install all packages in requirements.txt to the proj2 env
+    pip install -r other_requirements.txt
+
+    # install some_package to the proj2 virtual environment
+    pip install some_package
+
+    # use packages associated with proj1
+    workon proj1
+
+    # remove the proj2 virtual environment (and all packages installed in it)
+    rmvirtualenv proj2
+
+    # use only globally installed packages
+    deactivate
+
+    # globally install this package (not recommended, note 'sudo' is required)
+    sudo pip install some_package
+
+## Specify Python binary
+
+    mkvirtualenv proj --python=python3
+    mkvirtualenv proj --python=python3.4
+    mkvirtualenv proj --python=python3.6
+    mkvirtualenv proj --python=python2
+    mkvirtualenv proj --python=<some other binary>
 
 ## other options
 
