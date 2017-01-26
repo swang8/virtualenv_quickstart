@@ -18,10 +18,12 @@ Restart your terminal.
 You're done!
 
 ## example usage
+You now have the power to sandbox and switch your available python packages with a single command!
+
     # take a look at your globally installed python packages
     pip freeze
 
-    # make a new virtual environment to sandbox python packages
+    # make a new virtual environment to sandbox python packages, and immediately start working on it
     mkvirtualenv proj1
 
     # now look at your python packages available, they should be
