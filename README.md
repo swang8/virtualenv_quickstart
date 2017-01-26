@@ -5,25 +5,17 @@
     sudo pip install pip --upgrade
     sudo pip install virtualenvwrapper
 
-open `~/.bashrc` and add
+Find where the shell script was installed to
 
-    if [ -f  /usr/local/bin/virtualenvwrapper.sh ]; then
-        source /usr/local/bin/virtualenvwrapper.sh
-    else
-        echo "Could not find file /usr/local/bin/virtualenvwrapper.sh. Install virtualenvwrapper, or fix path."
-        echo "run 'find / -name "*virtualenvwrapper.sh" 2> /dev/null' to search for it."
-    fi
+	find / -name "*virtualenvwrapper.sh" 2> /dev/null
+
+Source that file in your `~/.bashrc` or `~/.bash_profile` (assumed location here was `/usr/local/bin/virtualenvwrapper.sh` but your location may vary):
+
+	source /usr/local/bin/virtualenvwrapper.sh
 
 Restart your terminal.
 
 You're done!
-
-## help finding virtualenvwrapper.sh
-if you can't find the installation script, you can run
-
-	find / -name "*virtualenvwrapper.sh" 2> /dev/null
-
-Mac users will likely have to do this
 
 ## example usage
 
