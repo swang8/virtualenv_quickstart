@@ -1,4 +1,4 @@
-# virtualenv quickstart
+# virtualenv/virtualenvwrapper quickstart
 
 ## install
 
