@@ -2,8 +2,19 @@
 
 ## install
 
-    sudo pip install pip --upgrade
-    sudo pip install virtualenvwrapper
+### python3
+
+    sudo apt-get install python3-pip
+    sudo python3 -m pip install pip --upgrade
+    sudo python3 -m pip install virtualenvwrapper
+
+### python2
+
+    sudo apt-get install python-pip
+    sudo python2 -m pip install pip --upgrade
+    sudo python2 -m pip install virtualenvwrapper
+    
+
 
 Find where the shell script was installed to
 
@@ -58,7 +69,12 @@ You now have the power to sandbox and switch your available python packages with
 ## Specify Python binary
 
     mkvirtualenv proj --python=python3
-    mkvirtualenv proj --python=python3.4
+    
+    # test your version
+    python --version
+    >> Python 3.4.3
+
+    mkvirtualenv proj --python=python3.5
     mkvirtualenv proj --python=python3.6
     mkvirtualenv proj --python=python2
     mkvirtualenv proj --python=<some other binary>
